@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue App</title>
+    <link rel="stylesheet" href="style/main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <section class="header__container">
+        <section class="header__title">
+          <h1 class="vue-logo">Vue.js</h1>
+          <div class="highligh-all">
+            <p class="inactive search">Search</p>
+            <p class="inactive ctrlk">Ctrl K</p>
+          </div>
+        </section>
+
+        <nav>
+          <ul class="header__links">
+            <li class="header__link">Docs</li>
+            <li class="header__link header__link--selected">API</li>
+            <li class="header__link">Playground</li>
+            <li class="header__link">Ecosystem</li>
+            <li class="header__link">About</li>
+            <li class="header__link">Sponsor</li>
+            <li class="header__link">Partners</li>
+          </ul>
+        </nav>
+      </section>
+      <section class="header__mobile">
+        <p>Menu</p>
+        <p>Return to top</p>
+      </section>
+    </header>
+
+    <main>
+      <section class="main-container">
+        <section class="site-sidebar">
+          <section class="site-sidebar__topic">
+            <h3 class="site-sidebar__title">Global API</h3>
+            <ul class="site-sidebar__links">
+              <li class="site-sidebar__link">Application</li>
+              <li class="site-sidebar__link">General</li>
+            </ul>
+          </section>
+
+          <section class="site-sidebar__topic">
+            <h3 class="site-sidebar__title">Composition API</h3>
+            <ul class="site-sidebar__links">
+              <li class="site-sidebar__link">setup()</li>
+              <li class="site-sidebar__link site-sidebar__link--selected">
+                Reactivity: Core
+              </li>
+              <li class="site-sidebar__link">Reactivity: Utilities</li>
+              <li class="site-sidebar__link">Reactivity: Advanced</li>
+              <li class="site-sidebar__link">Lifecycle Hooks</li>
+              <li class="site-sidebar__link">Dependency Injection</li>
+            </ul>
+          </section>
+
+          <section class="site-sidebar__topic">
+            <h3 class="site-sidebar__title">Options API</h3>
+            <ul class="site-sidebar__links">
+              <li class="site-sidebar__link">Options: State</li>
+              <li class="site-sidebar__link">Options: Rendering</li>
+              <li class="site-sidebar__link">Options: Lifecycle</li>
+              <li class="site-sidebar__link">Options: Composition</li>
+              <li class="site-sidebar__link">Options Misc</li>
+              <li class="site-sidebar__link">Component Instance</li>
+            </ul>
+          </section>
+
+          <section class="site-sidebar__topic">
+            <h3 class="site-sidebar__title">Built-ins</h3>
+            <ul class="site-sidebar__links">
+              <li class="site-sidebar__link">Directives</li>
+              <li class="site-sidebar__link">Components</li>
+              <li class="site-sidebar__link">Special Elements</li>
+              <li class="site-sidebar__link">Special Attributes</li>
+            </ul>
+          </section>
+
+          <section class="site-sidebar__topic">
+            <h3 class="site-sidebar__title">Single-File Component</h3>
+            <ul class="site-sidebar__links">
+              <li class="site-sidebar__link">Syntac Specification</li>
+              <li class="site-sidebar__link">&lt;script setup&gt;</li>
+              <li class="site-sidebar__link">CSS Features</li>
+            </ul>
+          </section>
+
+          <section class="site-sidebar__topic">
+            <h3 class="site-sidebar__title">Advanced APIs</h3>
+            <ul class="site-sidebar__links">
+              <li class="site-sidebar__link">Render Function</li>
+              <li class="site-sidebar__link">Server-Side Rendering</li>
+              <li class="site-sidebar__link">Typescript Utility Types</li>
+              <li class="site-sidebar__link">Custom Renderer</li>
+            </ul>
+          </section>
+        </section>
+
+        <article class="content">
+          <h3 class="content__title">Composition API: setup()</h3>
+
+          <section class="content__topic">
+            <h4 class="content__topic-title">ref()</h4>
+            <p class="content__topic-text">
+              Takes an inner value and returns a reactive and mutable ref
+              object, which has a single property .value that points to the
+              inner value.
+            </p>
+
+            <h5 class="content__topic-subtitle">Type</h5>
+            <h5 class="content__topic-subtitle">Details</h5>
+            <p class="content__topic-subtext">
+              The ref object is mutable - i.e. you can assign new values to
+              .value. It is also reactive - i.e. any read operations to .value
+              is tracked, and write operations will trigger associated effects.
+            </p>
+            <p class="content__topic-subtext">
+              If an object is assigned as a ref's value, the object is made
+              deeply reactive with reactive(). This also means if the object
+              contains nested refs, they will be deeply unwrapped.
+            </p>
+            <p class="content__topic-subtext">
+              To avoid the deep conversion, use shallowRef() instead.
+            </p>
+            <h5 class="content__topic-subtitle">Example</h5>
+            <h5 class="content__topic-subtitle">See also</h5>
+            <div class="empty"></div>
+
+            <h4 class="content__topic-title">computed()</h4>
+            <p class="content__topic-text">
+              Takes a getter function and returns a readonly reactive ref object
+              for the returned value from the getter. It can also take an object
+              with get and set functions to create a writable ref object.
+            </p>
+
+            <h5 class="content__topic-subtitle">Type</h5>
+            <h5 class="content__topic-subtitle">Example</h5>
+            <p class="content__topic-subtext">
+              Creating a readonly computed ref:
+            </p>
+            <p class="content__topic-subtext">
+              Creating a writable computed ref:
+            </p>
+            <h5 class="content__topic-subtitle">See also</h5>
+            <div class="empty"></div>
+
+            <h4 class="content__topic-title">reactive()</h4>
+            <p class="content__topic-text">
+              Returns a reactive proxy of the object.
+            </p>
+
+            <h5 class="content__topic-subtitle">Type</h5>
+            <h5 class="content__topic-subtitle">Details</h5>
+            <p class="content__topic-text">
+              The reactive conversion is "deep": it affects all nested
+              properties. A reactive object also deeply unwraps any properties
+              that are refs while maintaining reactivity.
+            </p>
+            <p class="content__topic-text">
+              It should also be noted that there is no ref unwrapping performed
+              when the ref is accessed as an element of a reactive array or a
+              native collection type like Map.
+            </p>
+            <p class="content__topic-text">
+              To avoid the deep conversion and only retain reactivity at the
+              root level, use shallowReactive() instead.
+            </p>
+            <p class="content__topic-text">
+              The returned object and its nested objects are wrapped with ES
+              Proxy and not equal to the original objects. It is recommended to
+              work exclusively with the reactive proxy and avoid relying on the
+              original object.
+            </p>
+            <div class="empty"></div>
+          </section>
+        </article>
+
+        <section class="page-sidebar">
+          <h3 class="page-sidebar__title">ON THIS PAGE</h3>
+          <ul class="page-sidebar__links">
+            <li class="page-sidebar__link page-sidebar__link--selected">
+              ref()
+            </li>
+            <li class="page-sidebar__link">computed()</li>
+            <li class="page-sidebar__link">reactive()</li>
+            <li class="page-sidebar__link">readonly()</li>
+            <li class="page-sidebar__link">watch()</li>
+            <li class="page-sidebar__link">watchEffect()</li>
+            <li class="page-sidebar__link">watchPostEffect()</li>
+            <li class="page-sidebar__link">watchSyncEffect()</li>
+          </ul>
+        </section>
+      </section>
+    </main>
+
+    <footer></footer>
+  </body>
+</html>
