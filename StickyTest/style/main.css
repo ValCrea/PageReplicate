@@ -1,0 +1,76 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.text-con {
+  width: 50vw;
+  height: 90vh;
+  margin-inline: auto;
+  margin-top: 40vh;
+  padding: 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: solid 1px gray;
+}
+.text-con__wrap {
+  flex-grow: 1;
+}
+.text-con__sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10vh;
+  font-size: 4rem;
+}
+.text-con__static {
+  font-size: 2rem;
+}
+
+.div-con {
+  width: 70vw;
+  height: 200vh;
+  margin-inline: auto;
+  margin-top: 20vh;
+  margin-bottom: 90vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: solid 1px gray;
+}
+.div-con__scroll-col {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  background-color: lightskyblue;
+}
+.div-con__sticky-col {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  background-color: sandybrown;
+}/*# sourceMappingURL=main.css.map */
